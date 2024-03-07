@@ -1,0 +1,13 @@
+@import './base/reset';
+
+@import './utils/variables';
+@import './utils/mixins';
+
+@import './base/fonts';
+@import './base/base';
+
+@import './components/navigation';
+@import './components/hero';
+@import './components/carrousel';
+@import './components/sticky';
+@import './components/footer';

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: $font-cycle;
+  src: url('../fonts/news-cycle.woff2') format('woff2'),
+    url('../fonts/news-cycle.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-cycle;
+  src: url('../fonts/news-cycle-bold.woff2') format('woff2'),
+    url('../fonts/news-cycle-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,131 @@
+.sticky {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sticky__item {
+  position: absolute;
+  top: 50%;
+  left: 26.3rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.sticky__item__top {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.sticky__item__title {
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.sticky__item__rate {
+  font-size: 2.4rem;
+}
+
+.sticky__item__text {
+  font-size: 2.4rem;
+  opacity: 0.6;
+  max-width: 56.2rem;
+}
+
+.sticky__item__pick {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sticky__item__pick__logo {
+  width: 2.4rem;
+  height: 2.3rem;
+}
+
+.sticky__item__pick__title {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.sticky__img {
+  position: absolute;
+  transition: transform 1s 0.25s ease;
+
+  &[data-index='0'] {
+    top: 16.5rem;
+    right: 40rem;
+    transform: translate(10%, 100%) rotate(-24deg);
+    width: 44.3rem;
+    height: 67.3rem;
+    z-index: 2;
+
+    &.visible {
+      transform: translate(0%, 0%) rotate(4deg);
+      transition: none;
+    }
+  }
+
+  &[data-index='1'] {
+    top: 25.7rem;
+    right: 39.4rem;
+    transform: translate(10%, 100%) rotate(-22deg);
+    width: 41.2rem;
+    height: 62.6rem;
+    z-index: 1;
+
+    &.visible {
+      transform: translate(0%, 0%) rotate(2deg);
+      transition: none;
+    }
+  }
+
+  &[data-index='2'] {
+    top: 31rem;
+    right: 38rem;
+    transform: translate(10%, 100%) rotate(-20deg);
+    width: 39.8rem;
+    height: 60.4rem;
+
+    &.visible {
+      transform: translate(0%, 0%) rotate(0deg);
+      transition: none;
+    }
+  }
+}
+
+.sticky__bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.sticky__circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10rem;
+  height: 10rem;
+  transform: translateY(-50%) scale(0);
+  border-radius: 50%;
+  z-index: -1;
+
+  &[data-index='0'] {
+    background: rgb(78, 26, 26);
+    transform: translateY(-50%) scale(1);
+  }
+
+  &[data-index='1'] {
+    background: rgb(26, 26, 78);
+  }
+
+  &[data-index='2'] {
+    background: rgb(26, 78, 26);
+  }
+}
