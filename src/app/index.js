@@ -104,13 +104,13 @@ class App {
   }
 
   onWheel(event) {
+    const normalizedWheel = NormalizeWheel(event);
+
     if (this.sticky && this.sticky.onWheel) {
-      this.sticky.onWheel();
+      this.sticky.onWheel(this.scroll.current, normalizedWheel);
     }
 
     if (this.blockScroll) return;
-
-    const normalizedWheel = NormalizeWheel(event);
 
     const speed = normalizedWheel.pixelY;
 
@@ -137,7 +137,7 @@ class App {
       if (this.scroll.target === 0) {
         this.scroll.current = Math.floor(this.scroll.current);
       } else {
-        this.scroll.current = Math.ceil(this.scroll.current - 1);
+        this.scroll.current = Number(this.scroll.current.toFixed(2));
       }
 
       if (this.scroll.current < this.scroll.last) {

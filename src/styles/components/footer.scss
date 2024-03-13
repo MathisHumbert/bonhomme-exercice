@@ -7,8 +7,10 @@
 
 .footer__img {
   @extend %cover;
-
+  width: calc(100% + 1rem);
+  height: calc(100% + 1rem);
   z-index: -1;
+  object-fit: cover;
 }
 
 .footer__infos {
